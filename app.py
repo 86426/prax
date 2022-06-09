@@ -7,12 +7,12 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     return render_template("index.html")
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     session['name1'] = None
     session['pass1'] = None
