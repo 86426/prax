@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template, session
 from flask_session import Session
+from datetime import date
 
 app = Flask(__name__)
 
@@ -34,6 +35,7 @@ def sluzby():
 @app.route('/ponuka', methods=["GET","POST"])
 def ponuka():
 
+    session['dnesnydatum'] = date.today().strftime("%d.%m.%Y")
     session['sluzba1'] = request.form.get("sluzba1")
     session['metre1'] = request.form.get("metre1")
     session['yn1'] = request.form.get("yn1")
@@ -54,9 +56,9 @@ def ponuka():
     session['metre5'] = request.form.get("metre5")
     session['yn5'] = request.form.get("yn5")
     session['cena5'] = request.form.get("cena5")
-    session['menoklienta'] = request.form.get("menoklienta")
+    session['menoklienta'] = request.form.get("menoklienta").capitalize()
     session['telefonklienta'] = request.form.get("telefonklienta")
-    session['adresaklienta'] = request.form.get("adresaklienta")
+    session['adresaklienta'] = request.form.get("adresaklienta").capitalize()
 
 
 #Robim prvy riadok

@@ -7,6 +7,14 @@
   text-align: right;
 }
 
+.footer{
+  bottom: 0;
+  padding-left: 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
 div.a{
   text-align: right;
   }
@@ -19,6 +27,13 @@ div.a{
 .containertext{
 padding-left: 40px;
 padding-right: 40px;
+
+}
+
+.containertext2{
+padding-left: 40px;
+padding-right: 40px;
+font-family: "Times New Roman", Times, serif;
 }
 
 .containerpozdrav{

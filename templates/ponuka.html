@@ -10,16 +10,16 @@
 <center>
   <h1>Ponuka</h1>
 </center>
+
+  <h5 class="containerdatum2"> {{session['dnesnydatum']}} <h5>
   <br>
-  <h5 class="containerdatum2"> 8.6.2022 <h5>
-  <br>
-  <br>
+
 <div class="containertext" class="mb-3">
   <h3>Klient: </h3>
 <table>
   <tr>
       <td>Meno:</td>
-      <td> {{session['menoklienta']}} </td>
+      <td>   {{session['menoklienta']}} </td>
   </tr>
   <tr>
       <td>Adresa: </td>
@@ -115,7 +115,8 @@
 <div class="containertext">
   <button onclick="window.print();" class="button-27" role="button"> Vytlačiť</button>
 </div>
+
   </body>
 </html>
-
+{% include "footer.html" %}
 {% endblock %}
