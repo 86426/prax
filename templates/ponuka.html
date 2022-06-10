@@ -4,118 +4,110 @@
 {% block content %}
 
 <html lang="en" dir="ltr">
-
   <body>
-  <br>
-<center>
-  <h1>Ponuka</h1>
-</center>
-
-  <h5 class="containerdatum2"> {{session['dnesnydatum']}} <h5>
-  <br>
-
-<div class="containertext" class="mb-3">
-  <h3>Klient: </h3>
-<table>
-  <tr>
-      <td>Meno:</td>
-      <td>   {{session['menoklienta']}} </td>
-  </tr>
-  <tr>
-      <td>Adresa: </td>
-      <td> {{session['adresaklienta']}} </td>
-  </tr>
-  <tr>
-      <td>Telefon: </td>
-      <td> {{session['telefonklienta']}} </td>
-  </tr>
-</table>
-</div>
-  <br>
-  <br>
-<div class="containertext" class="mb-3">
-
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <td>  </td>
-        <td> Ponúkané služby: </td>
-        <td> m²  </td>
-        <td> Cena za m² </td>
-        <td class="hodnotycelkom">  €  &nbsp;&nbsp;&nbsp;&nbsp;</td>
-
-      </tr>
-    </thead>
-    <tbody class="table-group-divider">
-      <tr>
-        <td> 1 </td>
-        <td> {{session['sluzba1']}} </td>
-        <td> {{session['metre1']}}  </td>
-        <td> {{session['cena1']}} </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom1'])}} </td>
-
-      </tr>
-      <tr>
-        <td> 2 </td>
-        <td>  {{session['sluzba2']}} </td>
-        <td>  {{session['metre2']}}  </td>
-        <td>  {{session['cena2']}} </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom2'])}} </td>
-      </tr>
-      <tr>
-        <td> 3 </td>
-        <td> {{session['sluzba3']}} </td>
-        <td>  {{session['metre3']}} </td>
-        <td>   {{session['cena3']}} </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom3'])}} </td>
-      </tr>
-      <tr>
-        <td> 4 </td>
-        <td> {{session['sluzba4']}} </td>
-        <td> {{session['metre4']}}  </td>
-        <td> {{session['cena4']}} </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom4'])}} </td>
-      </tr>
-      <tr>
-        <td> 5 </td>
-        <td> {{session['sluzba5']}} </td>
-        <td> {{session['metre5']}} </td>
-        <td> {{session['cena5']}} </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom5'])}} </td>
-      </tr>
-      <tr>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>  </td>
-        <td>   </td>
-      </tr>
-      <tr >
-        <td>   </td>
-        <td> Spolu </td>
-        <td>  </td>
-        <td>  </td>
-        <td class="hodnotycelkom"> {{"{:.2f}".format(session['dohromady'])}} </td>
-
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <br>
-  <br>
-<p class="container14">Táto ponuka platí... 14dní.</p>
-  <br>
-<div class="containerpozdrav" class="div.a">
-  S pozdravom
-</div>
-<div class="containermeno" class="div.a">
-  Branislav Šťastný
-</div>
-  <br>
-<div class="containertext">
-  <button onclick="window.print();" class="button-27" role="button"> Vytlačiť</button>
-</div>
-
+    <br>
+    <center>
+      <h1>Ponuka</h1>
+    </center>
+    <h5 class="containerdatum2"> {{session['dnesnydatum']}} <h5>
+    <br>
+    <div class="containertext" class="mb-3">
+      <h3>Klient: </h3>
+      <table>
+        <tr>
+          <td>Meno:</td>
+          <td>   {{session['menoklienta']}} </td>
+        </tr>
+        <tr>
+          <td>Adresa: </td>
+          <td> {{session['adresaklienta']}} </td>
+        </tr>
+        <tr>
+          <td>Telefon: </td>
+          <td> {{session['telefonklienta']}} </td>
+        </tr>
+      </table>
+    </div>
+    <br>
+    <br>
+    <div class="containertext" class="mb-3">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <td>  </td>
+            <td> Ponúkané služby: </td>
+            <td> m²  </td>
+            <td> Cena za m² </td>
+            <td class="hodnotycelkom">  €  &nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr>
+            <td> 1 </td>
+            <td> {{session['sluzba1']}} </td>
+            <td> {{session['metre1']}}  </td>
+            <td> {{session['cena1']}} </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom1'])}} </td>
+          </tr>
+          <tr>
+            <td> 2 </td>
+            <td>  {{session['sluzba2']}} </td>
+            <td>  {{session['metre2']}}  </td>
+            <td>  {{session['cena2']}} </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom2'])}} </td>
+          </tr>
+          <tr>
+            <td> 3 </td>
+            <td> {{session['sluzba3']}} </td>
+            <td>  {{session['metre3']}} </td>
+            <td>   {{session['cena3']}} </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom3'])}} </td>
+          </tr>
+          <tr>
+            <td> 4 </td>
+            <td> {{session['sluzba4']}} </td>
+            <td> {{session['metre4']}}  </td>
+            <td> {{session['cena4']}} </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom4'])}} </td>
+          </tr>
+          <tr>
+            <td> 5 </td>
+            <td> {{session['sluzba5']}} </td>
+            <td> {{session['metre5']}} </td>
+            <td> {{session['cena5']}} </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['cenacelkom5'])}} </td>
+          </tr>
+          <tr>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <td>   </td>
+          </tr>
+          <tr >
+            <td>   </td>
+            <td> Spolu </td>
+            <td>  </td>
+            <td>  </td>
+            <td class="hodnotycelkom"> {{"{:.2f}".format(session['dohromady'])}} </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <br>
+    <p class="container14">Táto ponuka platí... 14dní.</p>
+    <br>
+    <div class="containerpozdrav" class="div.a">
+      S pozdravom
+    </div>
+    <div class="containermeno" class="div.a">
+      Branislav Šťastný
+    </div>
+    <br>
+    <div class="containertext">
+      <button onclick="window.print();" class="button-27" role="button"> Vytlačiť</button>
+    </div>
   </body>
 </html>
 {% include "footer.html" %}

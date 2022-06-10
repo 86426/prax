@@ -4,75 +4,78 @@
 {% block content %}
 
 <html lang="en" dir="ltr">
+  <body>
+    <br>
+    <form action="/ponuka" method="POST">
+      <h3 class="containernazov">Klient</h3>
+      <div class="containertext" class="mb-3">
+        <label for="exampleInputEmail1"  class="label">Meno</label>  <input type="text" name="menoklienta" class="rcorners1" ><br>
+        <label for="exampleInputEmail1"  class="label">Adresa</label> <input type="text" name="adresaklienta" class="rcorners1" ><br>
+        <label for="exampleInputEmail1"  class="label">Telefon</label>  <input type="text" name="telefonklienta" class="rcorners1" >
+      </div>
+      <br>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <font class="containertext" size="5">Sluzby</font>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <font  size="5">m²</font>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <font  size="5">Cena za m²</font>
 
-  <body><br><form action="/ponuka" method="POST">
-<h3 class="containernazov">Klient</h3>
-<div class="containertext" class="mb-3">
-  <label for="exampleInputEmail1"  class="label">Meno</label>  <input type="text" name="menoklienta" class="rcorners1" ><br>
-  <label for="exampleInputEmail1"  class="label">Adresa</label> <input type="text" name="adresaklienta" class="rcorners1" ><br>
-  <label for="exampleInputEmail1"  class="label">Telefon</label>  <input type="text" name="telefonklienta" class="rcorners1" >
-</div><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<font class="containertext" size="5">Sluzby</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<font  size="5">m²</font>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<font  size="5">Cena za m²</font>
+      <br>
+      <div class="containertext">
+        <input  placeholder="Zameranie pozemku" class="rcorners4" name="sluzba1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="100" class="rcorners3" name="metre1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="2.00" class="rcorners3" name="cena1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
 
-
-<br>
-<div class="containertext">
-  <input  placeholder="Zameranie pozemku" class="rcorners4" name="sluzba1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="100" class="rcorners3" name="metre1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="2.00" class="rcorners3" name="cena1" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <label class="switch">
-    <input type="checkbox" name="yn1" checked >
-    <span class="slider round"></span>
-  </label><br><br>
-
-
-  <input placeholder="Vyčistenie pozemku" class="rcorners4" name="sluzba2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="100" class="rcorners3" name="metre2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="3.50" class="rcorners3" name="cena2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <label class="switch">
-    <input type="checkbox" name="yn2" checked >
-    <span class="slider round"></span>
-  </label><br><br>
+        <label class="switch">
+          <input type="checkbox" name="yn1" checked >
+          <span class="slider round"></span>
+        </label><br><br>
 
 
-  <input placeholder="Zemné úpravy" class="rcorners4" name="sluzba3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="100" class="rcorners3" name="metre3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="5.00" class="rcorners3" name="cena3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="Vyčistenie pozemku" class="rcorners4" name="sluzba2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="100" class="rcorners3" name="metre2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="3.50" class="rcorners3" name="cena2" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
 
-  <label class="switch" >
-    <input type="checkbox" name="yn3" checked >
-    <span class="slider round"></span>
-  </label><br><br>
-
-
-  <input placeholder="Búracie práce" class="rcorners4" name="sluzba4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="100" class="rcorners3" name="metre4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="7.00" class="rcorners3" name="cena4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <label class="switch">
-    <input type="checkbox" name="yn4" checked >
-    <span class="slider round"></span>
-  </label><br><br>
+        <label class="switch">
+          <input type="checkbox" name="yn2" checked >
+          <span class="slider round"></span>
+        </label><br><br>
 
 
-  <input placeholder="Vyčistenie cesty" class="rcorners4" name="sluzba5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="100" class="rcorners3" name="metre5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
-  <input placeholder="3.00" class="rcorners3" name="cena5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="Zemné úpravy" class="rcorners4" name="sluzba3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="100" class="rcorners3" name="metre3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="5.00" class="rcorners3" name="cena3" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
 
-  <label class="switch">
-    <input type="checkbox" name="yn5" checked >
-    <span class="slider round"></span>
-  </label><br><br>
+        <label class="switch" >
+          <input type="checkbox" name="yn3" checked >
+          <span class="slider round"></span>
+        </label><br><br>
 
 
-<button type="submit" class="button-27">Odoslať</button>
-</div> </form>
+        <input placeholder="Búracie práce" class="rcorners4" name="sluzba4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="100" class="rcorners3" name="metre4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="7.00" class="rcorners3" name="cena4" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label class="switch">
+          <input type="checkbox" name="yn4" checked >
+          <span class="slider round"></span>
+        </label><br><br>
+
+
+        <input placeholder="Vyčistenie cesty" class="rcorners4" name="sluzba5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="100" class="rcorners3" name="metre5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+        <input placeholder="3.00" class="rcorners3" name="cena5" type="text" >&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label class="switch">
+          <input type="checkbox" name="yn5" checked >
+          <span class="slider round"></span>
+        </label><br><br>
+
+
+        <button type="submit" class="button-27">Odoslať</button>
+      </div>
+    </form>
 {% include "footer.html" %}
   </body>
 </html>

@@ -4,26 +4,25 @@
 {% block content %}
 
 <html lang="en" dir="ltr">
-
-  <body><br>
-
-<h1 class="containernazov"> Prihlasenie </h1>
-<br> <form class="containertext" action="/sluzby" method="POST" >
-  <div class="mb-3" >
-    <label for="exampleInputEmail1" class="form-label">Prihlasovacie meno</label><br>
-    <input type="text" class="rcorners2" name="name1">
-
-
-  </div>
-  <div class="mb-3" id="Heslo">
-    <label for="exampleInputpassword" class="form-label">Heslo</label><br>
-    <input type="password" name="pass1" class="rcorners2" >
-  </div>
-  <div class="mb-3 form-check">
-<button type="submit" class="button-27">Odoslať</button>
-  </div>
-
-</form>
+  <body>
+    <br>
+    <h1 class="containernazov"> Prihlasenie </h1>
+    <br>
+    <form class="containertext" action="/sluzby" method="POST" >
+      <div class="mb-3" >
+        <label for="exampleInputEmail1" class="form-label">Prihlasovacie meno</label>
+        <br>
+        <input type="text" class="rcorners2" name="name1">
+      </div>
+      <div class="mb-3" id="Heslo">
+        <label for="exampleInputpassword" class="form-label">Heslo</label>
+        <br>
+        <input type="password" name="pass1" class="rcorners2" >
+      </div>
+      <div class="mb-3 form-check">
+        <button type="submit" class="button-27">Odoslať</button>
+      </div>
+    </form>
 {% include "footer.html" %}
   </body>
 </html>
